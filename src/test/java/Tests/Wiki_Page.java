@@ -52,10 +52,10 @@ public class Wiki_Page {
 		//Wait for Search Box to populate and Enter the Movie Name in Page
 		 wait.until(ExpectedConditions.visibilityOf(searchBox));
 		 searchBox.sendKeys(Constants.C_MovieName+" film");
-		 searchButton.click();
+		// searchButton.click();
 		 
 		 //Wait Movie Link is Displayed
-		 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class='mw-search-result-heading']//a)[1]"))).click();
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//bdi[contains(text(),'film')]"))).click();
 		 Boolean bn = releaseDate.isDisplayed();
  
 		 
